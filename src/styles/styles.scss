@@ -1,0 +1,34 @@
+@use 'variables' as *;
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html, body {
+    height: 100%;
+    font-family: $font-family-base;
+    margin: 0;
+}
+
+@mixin theme($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+
+    * {
+        color: $text-color;
+    }
+
+    .header .theme-toggle-button {
+        border-color: $text-color;
+    }
+
+    .footer .icons a {
+        border-color: $text-color;
+    }
+}
+
+body.light-theme, mat-toolbar.light-theme {
+    @include theme($light-color, $primary-color);
+}
+
+body.dark-theme, mat-toolbar.dark-theme {
+    @include theme($primary-color, $light-color);
+}
