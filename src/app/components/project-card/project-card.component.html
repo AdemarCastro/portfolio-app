@@ -1,0 +1,29 @@
+<div  class="project-card">
+    <div class="card-header">
+        <h3 class="project-title">{{ title }}</h3>
+    </div>
+    <div class="card-image">
+        <img [src]="imageUrl" alt="Imagem do Projeto">
+    </div>
+    <div class="card-details">
+        <div class="project-highlights">
+            <h4>Highlights:</h4>
+            <ul>
+                <li *ngFor="let highlight of highlights">{{ highlight }}</li>
+            </ul>
+        </div>
+        <div class="project-tags">
+            <span class="tag" *ngFor="let tag of tags">{{ tag }}</span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="project-links">
+            <button class="button-link" (click)="redirectTo('github')">
+                <i class="bi bi-github"></i> GitHub Repo
+            </button>
+            <button class="button-link" (click)="redirectTo('webApp')">
+                <i class="bi bi-globe"></i> Web App
+            </button>
+        </div>
+    </div>
+</div >

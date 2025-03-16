@@ -1,0 +1,104 @@
+@use 'variables' as *;
+
+.project-card {
+    border: 1px solid $dark-color;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: auto;
+}
+
+.card-header {
+    padding: 16px;
+    border-bottom: 1px solid $secondary-color;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+}
+
+.card-details {
+    padding: 16px;
+}
+
+.project-highlights h4 {
+    margin-bottom: 8px;
+}
+
+.project-highlights ul li{
+    list-style: disc;
+}
+
+.project-tags {
+    margin-bottom: 16px;
+}
+
+.project-tags .tag {
+    background-color: $secondary-color;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+}
+
+.card-footer {
+    padding: 16px;
+    border-top: 1px solid $secondary-color;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-links button {
+    flex: 1;
+    min-width: 100px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: $secondary-color;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.project-links button i {
+    font-size: 1.2rem;
+}
+
+.project-links button:hover {
+    background-color: $dark-color;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 100%;
+        margin: 10px;
+    }
+    .card-header, .card-details, .card-footer {
+        padding: 12px;
+    }
+    .project-title {
+        font-size: 1.25rem;
+    }
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
