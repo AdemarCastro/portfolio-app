@@ -1,0 +1,16 @@
+<mat-toolbar class="header" [ngClass]="{ 'dark-theme': isDarkTheme, 'light-theme': !isDarkTheme }">
+    <div class="container">
+        <a routerLink="/" class="logo">
+            <span>Ademar Castro</span>
+        </a>
+        <span class="spacer"></span>
+        <!-- <button mat-button routerLink="/about">About</button>
+        <button mat-button routerLink="/blog">Blog</button>
+        <button mat-button routerLink="/portfolio">Portfolio</button>
+        <button mat-button routerLink="/papers">Papers</button>
+        <button mat-button routerLink="/kraggle">Kraggle</button> -->
+        <button mat-icon-button class="theme-toggle-button" (click)="toggleTheme()">
+            <mat-icon>{{ isDarkTheme ? 'brightness_3' : 'wb_sunny' }}</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
