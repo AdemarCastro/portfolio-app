@@ -1,0 +1,54 @@
+<div class="home-container">
+    <div class="profile">
+        <img src="/assets/images/profile.png" alt="Ademar Castro" class="profile-image">
+        <div class="profile-info">
+            <div class="intro">
+                <p>Fala, meu brother. Meu nome é Ademar Castro!</p>
+                <img src="/assets/images/link.gif" alt="emoji" class="emoji">
+            </div>
+            <p>
+                Especializado em Hyperautomation, Inteligência Artificial e Data Science.
+                <br>
+                Este site hospeda meu blog, portfólio e mais do meu trabalho. Todas as opiniões são minhas.
+            </p>
+            <p>Confira <a href="/assets/pdfs/curriculo.pdf" target="_blank">meu CV</a> e outras páginas:</p>
+            <ul>
+                <li>🎤 Palestras públicas em meetups e conferências de IA</li>
+                <li>📖 Publicações científicas com resumos e PDFs</li>
+                <li>📂 Portfólio com meus projetos de ML em diferentes domínios</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="expandable-section" (click)="toggleSection()">
+        <div class="section-header">
+            <h2>Hyperautomation</h2>
+            <button id="toggleButton">
+                <i class="bi" [class.bi-dash]="isSectionExpanded" [class.bi-plus]="!isSectionExpanded"></i>
+            </button>
+        </div>
+        <div id="expandableContent" 
+            [style.display]="isSectionExpanded ? 'block' : 'none'"
+            (click)="$event.stopPropagation()">     
+        </div>
+    </div> -->
+
+    <br>
+
+    <h2>Meu Potfólio</h2>
+
+    <app-project-card 
+        [imageUrl]="'assets/images/dataset_mg.png'"
+        [title]="'Análise Estatística e Geográfica dos Municípios de Minas Gerais'"
+        [highlights]="[
+            'Realizou uma Análise Exploratória de Dados (EDA) detalhada sobre os municípios de MG.',
+            'Desenvolveu visualizações estatísticas e geográficas para compreender disparidades regionais.',
+            'Aplicou técnicas de pré-processamento para melhorar a qualidade dos dados e facilitar análises futuras.'
+        ]"
+        [tags]="['EDA', 'Análise Geográfica', 'Data Science']"
+        [links]="{
+        github: 'https://github.com/AdemarCastro/mg-municipios-eda',
+        webApp: 'https://seu-webapp.com'
+        }">
+    </app-project-card>
+</div>
