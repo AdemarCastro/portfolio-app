@@ -8,12 +8,13 @@
     padding: 0;
     width: 100%;
     max-width: 1080px;
-    margin: 0 auto; /* Centraliza o contêiner */
+    margin: 0 auto;
     min-height: 100vh;
 
     .profile {
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
         padding: 20px;
         width: 100%;
         text-align: left;
@@ -27,6 +28,9 @@
         }
 
         .profile-info {
+            flex: 1;
+            min-width: 300px;
+
             .intro {
                 display: flex;
                 align-items: flex-end;
@@ -65,35 +69,23 @@
         }
     }
 
-    .expandable-section {
+    .portfolio-container {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
         width: 100%;
         margin-top: 20px;
-        cursor: pointer;
 
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-
-            h2 {
-                margin: 0;
-            }
-
-            button {
-                background: none;
-                border: none;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
+        .portfolio-image {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
         }
 
-        #expandableContent {
-            padding: 10px;
-            border-radius: 5px;
-            border-top: none;
+        .portfolio-info {
+            flex: 1;
+            min-width: 300px;
         }
     }
 }
@@ -112,21 +104,26 @@
             }
 
             .profile-info {
-                text-align: center;
+                text-align: left;
+                width: 100%;
+            }
+        }
 
-                h1 {
-                    font-size: 1.5rem;
-                }
+        .portfolio-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
 
-                p {
-                    font-size: 0.9rem;
-                }
+            .portfolio-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+                max-width: 300px;
+            }
 
-                ul {
-                    li {
-                        font-size: 0.9rem;
-                    }
-                }
+            .portfolio-info {
+                text-align: left;
+                width: 100%;
             }
         }
     }

@@ -20,6 +20,8 @@
         </div>
     </div>
 
+    <h2>Meu Portfólio</h2>
+
     <!-- <div class="expandable-section" (click)="toggleSection()">
         <div class="section-header">
             <h2>Hyperautomation</h2>
@@ -33,22 +35,22 @@
         </div>
     </div> -->
 
-    <br>
-
-    <h2>Meu Potfólio</h2>
-
-    <app-project-card 
-        [imageUrl]="'assets/images/mapa_calor_mg.png'"
-        [title]="'Análise Estatística e Geográfica dos Municípios de Minas Gerais'"
-        [highlights]="[
-            'Realizou uma Análise Exploratória de Dados (EDA) detalhada sobre os municípios de MG.',
-            'Desenvolveu visualizações estatísticas e geográficas para compreender disparidades regionais.',
-            'Aplicou técnicas de pré-processamento para melhorar a qualidade dos dados e facilitar análises futuras.'
-        ]"
-        [tags]="['EDA', 'Análise Geográfica', 'Data Science']"
-        [links]="{
-        github: 'https://github.com/AdemarCastro/mg-municipios-eda',
-        webApp: 'https://seu-webapp.com'
-        }">
-    </app-project-card>
+    <div class="portfolio-container">
+        <div class="portfolio-info">
+            <app-project-card 
+                [imageUrl]="'assets/images/mapa_calor_mg.png'"
+                [title]="'Análise Estatística e Geográfica dos Municípios de Minas Gerais'"
+                [highlights]="[
+                    'Realizou uma Análise Exploratória de Dados (EDA) detalhada sobre os municípios de MG.',
+                    'Desenvolveu visualizações estatísticas e geográficas para compreender disparidades regionais.',
+                    'Aplicou técnicas de pré-processamento para melhorar a qualidade dos dados e facilitar análises futuras.'
+                ]"
+                [tags]="['EDA', 'Análise Geográfica', 'Data Science']"
+                [links]="{
+                github: 'https://github.com/AdemarCastro/mg-municipios-eda',
+                webApp: 'https://seu-webapp.com'
+                }">
+            </app-project-card>
+        </div>
+    </div>
 </div>
